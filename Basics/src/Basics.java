@@ -12,26 +12,22 @@ public class Basics {
 
 	public static void main(String[] args) throws FileNotFoundException
 	{
-		LinkedList<String> names = new LinkedList<String>();
-		names.push("Bryan");
-		names.push("Sue");
-		names.push("Sally");
-		names.add(2, "Susan");
+		int[][] data = {
+				{1, 561, 51, 15},
+				{45, 54, 51, 98, 5, 64, 4},
+				{78, 98, 5, 8}
+				};
+//		System.out.println(data.length);
+//		System.out.println(data[0].length);
 		
-		ListIterator<String> iter = names.listIterator();
-		/*Check if there's an element in list.
-		 * if so print actual element. This here prints the normal list 
-		 * but adds Marco before each entry. The new list is printed below. */
-		while(iter.hasNext()) {
-			iter.add("Marco");
-			System.out.println(iter.next());
-		}
-		System.out.println("---------------------");
-		/*the forEach loop cannot modify the collection. That's 
-		 * why iterators are used. This loop creates an iterator implicitly.*/
-		for(String s: names) {
-			System.out.println(s);
+		
+		for(int i =0; i< data.length; i++) 			
+		{	int columns = data[i].length;
+			for(int j=0; j < columns; j++)
+			{
+			System.out.print(data[i][j] + ", ");
+			}
+			System.out.println();
 		}
 	}
-
 }
