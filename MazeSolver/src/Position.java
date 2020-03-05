@@ -6,7 +6,7 @@ public class Position {
 	public int y; 
 	
 	/*This is a constructor needed to make stuff cleaner*/
-	public Position(int x, int y) {
+	public Position(int y, int x) {
 		this.x = x; // "this" creates the reference to public int x, y
 		this.y = y;
 		
